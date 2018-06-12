@@ -7,11 +7,14 @@ function Tweet() {
     <div className="tweet">
       <Avatar />
       <div className="content">
-        <NameWithHandle /> <Time/>
+        <NameWithHandle/> <Time/>
         <Message/>
-      </div>
-      <div className="buttons">
-        <ReplyButton/>
+        <div className="buttons">
+          <ReplyButton/>
+          <RetweetButton/>
+          <LikeButton/>
+          <MoreOptionsButton/>
+        </div>
       </div>
     </div>
   );
@@ -41,7 +44,7 @@ function NameWithHandle() {
 }
 
 const Time = () => (
-  <span className="time">3 hr ago.</span>
+  <span className="time">3 hr ago</span>
 )
 
 function Message() {
@@ -54,6 +57,18 @@ function Message() {
 
 const ReplyButton = () => (
   <i className="fa fa-reply reply-button"/>
+);
+
+const RetweetButton = () => (
+  <i className="fa fa-retweet retweet-button"/>
+);
+
+const LikeButton = () => (
+  <i className="fa fa-heart like-button"/>
+);
+
+const MoreOptionsButton = () => (
+  <i className="fa fa-ellipsis-h more-options-button"/>
 );
 
 ReactDOM.render(
