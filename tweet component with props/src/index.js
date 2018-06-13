@@ -11,6 +11,12 @@ function Tweet({ tweet }) {
         <NameWithHandle author={tweet.author}/>
         <Time time={tweet.timestamp}/>
         <Message text={tweet.message}/>
+        <div className="buttons">
+          <ReplyButton/>
+          <RetweetButton retweet={tweet.retweets}/>
+          <LikeButton likes={tweet.likes}/>
+          <MoreOptionsButton/>
+        </div>
       </div>
     </div>
   );
@@ -52,6 +58,32 @@ function Message({ text }) {
   );
 }
 
+const ReplyButton = () => (
+  <i className="fa fa-reply reply-button"/>
+);
+
+const RetweetButton = ({ retweet }) => (
+  <span className="retweet-button">
+    <i className="fa fa-retweet"/>
+    <span className="retweet-count">
+    {retweet}
+    </span>
+  </span>
+);
+
+const LikeButton = ({ likes }) => (
+  <span className="like-button">
+    <i className="fa fa-heart"/>
+    <span className="like-count">
+      {likes}
+    </span>
+  </span>
+);
+
+const MoreOptionsButton = () => (
+  <i className="fa fa-ellipsis-h more-options-button"/>
+)
+
 var tweetObject = {
   img: "https://avatars2.githubusercontent.com/u/6664187?s=400&u=eb02e1d29d8454abcefd948bf4d879509d56ef74&v=4",
   message: "Something about Cats",
@@ -59,7 +91,9 @@ var tweetObject = {
     name: "Jigyasu",
     handle: "@lastnamearya"
   },
-  timestamp: "2016-07-30 21:24:37"
+  timestamp: "2016-07-30 21:24:37",
+  likes: 2,
+  retweets: 17
 };
 
 ReactDOM.render(
