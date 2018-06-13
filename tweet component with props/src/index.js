@@ -62,27 +62,39 @@ const ReplyButton = () => (
   <i className="fa fa-reply reply-button"/>
 );
 
+function getRetweetCount(count) {
+  if (count > 0) {
+    return (
+      <span className="retweet-count">
+        {count}
+      </span>
+    );
+  } else {
+    return null;
+  }
+}
+
 const RetweetButton = ({ retweet }) => (
   <span className="retweet-button">
     <i className="fa fa-retweet"/>
-    <span className="retweet-count">
-    {retweet}
-    </span>
+    {getRetweetCount(retweet)}
   </span>
 );
 
 const LikeButton = ({ likes }) => (
   <span className="like-button">
     <i className="fa fa-heart"/>
-    <span className="like-count">
-      {likes}
-    </span>
+    {likes > 0 && 
+      <span className="like-count">
+        {likes}
+      </span>
+    }
   </span>
 );
 
 const MoreOptionsButton = () => (
   <i className="fa fa-ellipsis-h more-options-button"/>
-)
+);
 
 var tweetObject = {
   img: "https://avatars2.githubusercontent.com/u/6664187?s=400&u=eb02e1d29d8454abcefd948bf4d879509d56ef74&v=4",
