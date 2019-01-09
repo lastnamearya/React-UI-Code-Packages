@@ -1,0 +1,10 @@
+button:hover {
+  cursor: pointer;
+}
+
+.menu {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
