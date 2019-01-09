@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+}
+
+.inputs label p {
+  font-family: "Circular Std";
+}
+
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type="radio"] + p {
+  text-align: center;
+  height: 75px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5.36px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 8px 0 rgba(179, 180, 183, 0.34);
+  box-shadow: 0 0 8px 0 rgba(179, 180, 183, 0.34);
+  line-height: 75px;
+  color: #000000;
+  font-family: "Circular Std";
+  font-size: 24.13px;
+  font-weight: 300;
+  letter-spacing: -0.34px;
+  margin-right: 27px;
+}
+
+[type="radio"] + p:hover {
+  background: #3280f6;
+  color: white;
+  cursor: pointer;
+}
+
+[type="radio"]:checked + p {
+  background: #3280f6;
+  color: white;
+}
