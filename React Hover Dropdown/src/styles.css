@@ -1,0 +1,20 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.hover-button {
+  cursor: pointer;
+}
+
+.hidden-div {
+  margin-top: 10px;
+  border: 1px solid black;
+  padding-left: 20px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.hidden-div p:hover {
+  color: red;
+}
